@@ -90,6 +90,7 @@
         
         .tab-btn {
             border-bottom: 2px solid transparent;
+            cursor: pointer;
         }
         .tab-btn.active {
             border-bottom-color: #0FCD7D;
@@ -317,10 +318,10 @@
 
                     <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-[#3E9883]/30 overflow-hidden shadow-lg">
                         <div class="flex flex-col md:flex-row border-b border-[#3E9883]/30 bg-black/10" id="tabs-container">
-                            <button class="tab-btn active flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-[#0FCD7D]">Signal Detection</button>
-                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent">Assessment</button>
-                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent">Engagement</button>
-                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent">Orchestration</button>
+                            <button class="tab-btn active flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-[#0FCD7D]" data-tab="1">Signal Detection</button>
+                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent" data-tab="2">Assessment</button>
+                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent" data-tab="3">Engagement</button>
+                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent" data-tab="4">Orchestration</button>
                         </div>
 
                         <div class="p-6 md:p-8 min-h-[220px] flex items-center bg-white/5">
@@ -538,6 +539,40 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            // TAB FUNCTIONALITY FOR PLATFORM SLIDE
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const tabNumber = button.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons
+                    tabButtons.forEach((btn) => btn.classList.remove('active'));
+                    
+                    // Hide all tab contents
+                    tabContents.forEach((content) => content.classList.add('hidden'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show the corresponding tab content
+                    const activeTab = document.getElementById(`tab-${tabNumber}`);
+                    if (activeTab) {
+                        activeTab.classList.remove('hidden');
+                    }
+                    
+                    // Update border color
+                    tabButtons.forEach((btn) => {
+                        if (btn.classList.contains('active')) {
+                            btn.style.borderBottomColor = '#0FCD7D';
+                        } else {
+                            btn.style.borderBottomColor = 'transparent';
+                        }
+                    });
+                });
+            });
+
             const toggle = document.getElementById('view-toggle');
             const labelCorp = document.getElementById('label-corporate');
             const labelEmp = document.getElementById('label-employee');
