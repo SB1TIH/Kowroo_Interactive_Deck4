@@ -125,24 +125,26 @@
     <nav class="fixed w-full z-40 bg-[#194848]/95 backdrop-blur-sm border-b border-[#3E9883]/30 h-16 flex items-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center">
             <div class="flex items-center gap-3 cursor-pointer" onclick="document.getElementById('intro').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})">
-                <img src="Kowroo Logo PNG w+g.png" alt="Kowroo Logo" class="h-6 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <img src="images/Kowroo Logo PNG w+g.png" alt="Kowroo Logo" class="h-6 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
             </div>
             <div class="hidden md:flex space-x-6 lg:space-x-8" id="nav-group">
-                <button onclick="document.getElementById('problem').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors text-xs tracking-wider uppercase font-medium">
+                <button onclick="document.getElementById('problem').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors duration-200">
                     <span class="text-[#0FCD7D] font-bold mr-1">01 /</span> Blind Spot
                 </button>
-                <button onclick="document.getElementById('cost').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors text-xs tracking-wider uppercase font-medium">
+                <button onclick="document.getElementById('cost').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors duration-200">
                     <span class="text-[#0FCD7D] font-bold mr-1">02 /</span> Unseen Friction
                 </button>
-                <button onclick="document.getElementById('solution').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors text-xs tracking-wider uppercase font-medium">
+                <button onclick="document.getElementById('solution').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors duration-200">
                     <span class="text-[#0FCD7D] font-bold mr-1">03 /</span> Platform
                 </button>
-                <button onclick="document.getElementById('proof').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors text-xs tracking-wider uppercase font-medium">
+                <button onclick="document.getElementById('proof').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="nav-link text-gray-300 hover:text-white transition-colors duration-200">
                     <span class="text-[#0FCD7D] font-bold mr-1">04 /</span> In Action
                 </button>
             </div>
             <div>
-                <button onclick="openCalModal()" class="bg-[#0FCD7D] text-[#194848] px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(15,205,125,0.4)]">Book Demo</button>
+                <button onclick="openCalModal()" class="bg-[#0FCD7D] text-[#194848] px-6 py-2 rounded-full font-bold text-sm hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(15,205,125,0.3)]">
+                    Book a Demo
+                </button>
             </div>
         </div>
     </nav>
@@ -157,12 +159,12 @@
                         <span class="text-[#0FCD7D] text-xs font-bold tracking-wider uppercase">The Evolution of Duty of Care</span>
                     </div>
                     <h1 class="merriweather text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6 animate-fade-in">
-                        Bridging the gap between <span class="text-[#0FCD7D]">corporate risk</span> <span class="whitespace-nowrap">and <span class="text-white border-b-4 border-[#0FCD7D]">human experience.</span></span>
+                        Bridging the gap between <span class="text-[#0FCD7D]">corporate risk</span> <span class="whitespace-nowrap">and <span class="text-white border-b-4 border-[#0FCD7D]">human experience</span></span>
                     </h1>
                     <p class="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
                         Traditional tools tell you what is happening <em>around</em> your people. Kowroo tells you what is happening <em>to</em> your people. Welcome to true People Risk Management.
                     </p>
-                    <button onclick="document.getElementById('problem').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="text-white flex items-center gap-2 hover:text-[#0FCD7D] transition-colors group text-base font-medium">
+                    <button onclick="document.getElementById('problem').scrollIntoView({behavior: 'smooth', inline: 'start', block: 'nearest'})" class="text-white flex items-center gap-2 hover:text-[#0FCD7D] transition-colors group font-medium">
                         Explore the Disconnect
                         <span class="transform group-hover:translate-x-1 transition-transform">&#8594;</span>
                     </button>
@@ -171,7 +173,7 @@
                 <div class="lg:w-4/12 mt-12 lg:mt-0 flex justify-center items-center relative hidden md:flex">
                     <div class="absolute w-72 h-72 bg-[#0FCD7D]/10 rounded-full blur-3xl -z-10"></div>
                     <div class="hero-traveler-wrapper">
-                        <img src="Walking_Traveler white.png" alt="Kowroo Risk Assessment Graphic" class="w-full h-auto object-contain mix-blend-screen">
+                        <img src="images/Walking_Traveler white.png" alt="Kowroo Risk Assessment Graphic" class="w-full h-auto object-contain mix-blend-screen">
                     </div>
                 </div>
             </div>
@@ -188,10 +190,10 @@
                     </div>
                     <div class="lg:col-span-7 space-y-3 text-[#194848]/90 text-sm md:text-base leading-relaxed border-l-2 border-[#0FCD7D] pl-6">
                         <p>
-                            Traditional Travel Risk Management systems are highly effective at monitoring operational threats, major incidents, and regional disruption. However, they often struggle to capture how risk is actually experienced by individuals on the ground.
+                            Traditional Travel Risk Management systems are highly effective at monitoring operational threats, major incidents, and regional disruption. However, they often struggle to capture the secondary effects on employee wellbeing, behavioural shifts, and psychological resilience following critical events.
                         </p>
                         <p class="font-medium text-[#194848]">
-                            The result is a critical visibility gap between what the corporate dashboard reports and what employees may genuinely feel, experience, or alter their behaviour around in real-world environments.
+                            The result is a critical visibility gap between what the corporate dashboard reports and what employees may genuinely feel, experience, or alter their behaviour around.
                         </p>
                         <p class="text-xs text-[#194848]/70 italic">
                             Use the toggle below to compare the organisational view of risk with the lived employee experience following many incidents.
@@ -206,7 +208,7 @@
                         <div class="flex items-center gap-4 bg-white p-2 rounded-full border border-gray-200 shadow-sm">
                             <span id="label-corporate" class="text-xs sm:text-sm font-bold text-[#194848]">Corporate Dashboard</span>
                             <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-                                <input type="checkbox" name="toggle" id="view-toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-gray-300 z-10 transition-all duration-300"/>
+                                <input type="checkbox" name="toggle" id="view-toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-gray-300">
                                 <label for="view-toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer transition-colors duration-300"></label>
                             </div>
                             <span id="label-employee" class="text-xs sm:text-sm font-normal text-gray-400">Employee Reality</span>
@@ -224,7 +226,7 @@
                                     The Incident is Contained.
                                 </h3>
                                 <p id="problem-body" class="text-sm md:text-base text-gray-600 leading-relaxed transition-opacity duration-300">
-                                    Traditional risk models focus on macro-threats. The physical event has ended. The statistical probability of a major event is low. The dashboard reports that normality has returned and operational disruptions are cleared.
+                                    Traditional risk models focus on macro-threats. The physical event has ended. The statistical probability of a major event is low. The dashboard reports that normality has been restored. All-clear status maintained.
                                 </p>
                             </div>
                             <div class="relative h-44 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-center overflow-hidden" id="visual-container">
@@ -260,10 +262,10 @@
                     </div>
                     <div class="lg:col-span-7 space-y-2 text-[#194848]/90 text-sm md:text-base leading-relaxed pl-6 border-l-2 border-gray-100">
                         <p class="font-light text-xl leading-snug text-[#194848]/80">
-                            One of the most overlooked costs in corporate travel is not the incident itself, but the subtle friction employees experience before, during, and after periods of heightened tension or uncertainty.
+                            One of the most overlooked costs in corporate travel is not the incident itself, but the subtle friction employees experience before, during, and after periods of heightened risk or disruption.
                         </p>
                         <p class="text-gray-500 text-sm leading-relaxed">
-                            The illustrative chart below highlights a critical challenge: while operational assessments may stabilise or quickly return to "normal," employee confidence and behavioural recovery often follow a very different path. As individuals quietly adapt their behaviour, limit movement, avoid engagement, or manage perceived risks alone, organisations lose visibility into the realities of the employee experience on the ground.
+                            The illustrative chart below highlights a critical challenge: while operational assessments may stabilise or quickly return to "normal," employee confidence and behaviour adaptation often lags significantly behind.
                         </p>
                     </div>
                 </div>
@@ -281,7 +283,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                     <div class="bg-[#EFEEED] p-3.5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-center">
                         <h4 class="text-xs font-bold text-[#194848] mb-1.5 tracking-wide">Productivity</h4>
-                        <p class="text-gray-700 text-xs md:text-[13px] leading-relaxed">When employees must manage their own safety logistics, anxiety drains 2.5 hours per day, wasting $500 in salary on a standard 4-day trip.</p>
+                        <p class="text-gray-700 text-xs md:text-[13px] leading-relaxed">When employees must manage their own safety logistics, anxiety drains 2.5 hours per day, wasting $500 in salary per incident.</p>
                     </div>
                     <div class="bg-[#EFEEED] p-3.5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-center">
                         <h4 class="text-xs font-bold text-[#194848] mb-1.5 tracking-wide">Loss of productivity</h4>
@@ -289,11 +291,11 @@
                     </div>
                     <div class="bg-[#EFEEED] p-3.5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-center">
                         <h4 class="text-xs font-bold text-[#194848] mb-1.5 tracking-wide">Missed travel ROI</h4>
-                        <p class="text-gray-700 text-xs md:text-[13px] leading-relaxed">Fear shrinks the perimeter. Anxious travellers skip high-value client dinners and networking, turning a potential $12.50-to-$1 return into a sunk cost.</p>
+                        <p class="text-gray-700 text-xs md:text-[13px] leading-relaxed">Fear shrinks the perimeter. Anxious travellers skip high-value client dinners and networking, turning a potential revenue opportunity into a sunk cost.</p>
                     </div>
                     <div class="bg-[#EFEEED] p-3.5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-center">
                         <h4 class="text-xs font-bold text-[#194848] mb-1.5 tracking-wide">Erosion of trust</h4>
-                        <p class="text-gray-700 text-xs md:text-[13px] leading-relaxed">Forcing travellers to navigate unspoken risks causes severe burnout. Replacing just one mid-level employee costs $50,000 to $150,000.</p>
+                        <p class="text-gray-700 text-xs md:text-[13px] leading-relaxed">Forcing travellers to navigate unspoken risks causes severe burnout. Replacing just one mid-level employee costs 150% of annual salary.</p>
                     </div>
                 </div>
             </div>
@@ -309,16 +311,16 @@
                         </div>
                         <h2 class="merriweather text-3xl font-bold mb-3">From Passive Data to Process Orchestration</h2>
                         <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                            Explore how Kowroo captures hyper-local context and transforms fragmented signals into personalised, automated action. Select a tab below to see how our mechanics bridge the gap.
+                            Explore how Kowroo captures hyper-local context and transforms fragmented signals into personalised, automated action. Select a tab below to see how our mechanics bridge the gap between corporate visibility and human reality.
                         </p>
                     </div>
 
                     <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-[#3E9883]/30 overflow-hidden shadow-lg">
                         <div class="flex flex-col md:flex-row border-b border-[#3E9883]/30 bg-black/10" id="tabs-container">
-                            <button class="tab-btn active flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent text-[#0FCD7D] hover:text-white" data-target="tab-1">Pre-Event Detection</button>
-                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent text-gray-400 hover:text-white" data-target="tab-2">Individualised Assessment</button>
-                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent text-gray-400 hover:text-white" data-target="tab-3">Employee Engagement</button>
-                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent text-gray-400 hover:text-white" data-target="tab-4">Automated Orchestration</button>
+                            <button class="tab-btn active flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-[#0FCD7D]">Signal Detection</button>
+                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent">Assessment</button>
+                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent">Engagement</button>
+                            <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent">Orchestration</button>
                         </div>
 
                         <div class="p-6 md:p-8 min-h-[220px] flex items-center bg-white/5">
@@ -331,7 +333,7 @@
                                     </div>
                                     <div class="lg:col-span-8 pl-0 lg:pl-8 lg:border-l border-white/10 space-y-2 text-gray-300 text-sm md:text-base leading-relaxed">
                                         <p>
-                                            Kowroo continuously aggregates hyper-local signals across security, safety, weather, transport, public sentiment, and environmental data sources to identify emerging risks before formal alerts are triggered.
+                                            Kowroo continuously aggregates hyper-local signals across security, safety, weather, transport, public sentiment, and environmental data sources to identify emerging risk contexts ahead of major disruptions.
                                         </p>
                                         <p class="font-medium text-white">
                                             This allows organisations to detect evolving tension, disruption, or residual risk environments earlier, not just react once incidents escalate.
@@ -351,7 +353,7 @@
                                             Traditional risk tools assess locations. Kowroo assesses how risk interacts with the individual.
                                         </p>
                                         <p class="font-medium text-white">
-                                            By considering personal context, location, timing, behavioural patterns, and evolving environmental conditions, Kowroo generates dynamic, real-time risk assessments tailored to each employee’s situation. This creates a more human-centred understanding of risk, confidence, and exposure.
+                                            By considering personal context, location, timing, behavioural patterns, and evolving environmental conditions, Kowroo generates dynamic, real-time risk scores customised to the individual.
                                         </p>
                                     </div>
                                 </div>
@@ -365,10 +367,10 @@
                                     </div>
                                     <div class="lg:col-span-8 pl-0 lg:pl-8 lg:border-l border-white/10 space-y-2 text-gray-300 text-sm md:text-base leading-relaxed">
                                         <p>
-                                            Kowroo enables low-friction, real-time communication between employees and organisations through dynamic check-ins, SOS, Follow Me Home, chat, and feedback mechanisms.
+                                            Kowroo enables low-friction, real-time communication between employees and organisations through dynamic check-ins, SOS, Follow Me Home, chat, and feedback loops.
                                         </p>
                                         <p class="font-medium text-white">
-                                            Employees can discreetly signal concern, uncertainty, or changing circumstances without needing to trigger escalatory emergency workflows, while organisations gain visibility into emerging issues that traditional dashboards often miss.
+                                            Employees can discreetly signal concern, uncertainty, or changing circumstances without needing to trigger escalatory emergency workflows, while organisations stay attuned to subtle shifts in wellbeing and behaviour.
                                         </p>
                                     </div>
                                 </div>
@@ -385,7 +387,7 @@
                                             Kowroo does not simply generate alerts, it drives coordinated action.
                                         </p>
                                         <p class="font-medium text-white text-sm">
-                                            The platform automates workflows, escalations, routing, notifications, and contextual responses based on evolving risk conditions and employee interactions, reducing manual workload while improving response speed, consistency, and operational visibility.
+                                            The platform automates workflows, escalations, routing, notifications, and contextual responses based on evolving risk conditions and employee interactions.
                                         </p>
                                     </div>
                                 </div>
@@ -408,10 +410,10 @@
                     </div>
                     <div class="lg:col-span-7 space-y-4 text-[#194848]/90 text-lg leading-relaxed border-l-2 border-[#0FCD7D] pl-6 md:pl-8">
                         <p>
-                            Following a stabbing incident outside a primary school in Dublin city centre on 23 November 2023, misinformation and anti-immigrant narratives rapidly spread online. Within hours, tensions escalated into significant public disorder involving arson, looting, attacks on public transport, and assaults on Gardaí.
+                            Following a stabbing incident outside a primary school in Dublin city centre on 23 November 2023, misinformation and anti-immigrant narratives rapidly spread online. Within days, rumours escalated into the planned "riots" that caught many in corporate security flatfooted. Meanwhile, their employees were navigating a gauntlet of fear, rumour, and rapidly deteriorating confidence in their employer's protective capabilities.
                         </p>
                         <p class="font-medium text-[#194848]">
-                            Click through the timeline below to explore how traditional risk tools often miss critical windows of emerging and evolving risk, and how Kowroo captures the broader human and operational reality before, during, and after an incident.
+                            Click through the timeline below to explore how traditional risk tools often miss critical windows of emerging and evolving risk, and how Kowroo captures the broader human and operational picture.
                         </p>
                     </div>
                 </div>
@@ -421,21 +423,21 @@
                         <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -z-10 transform -translate-y-1/2"></div>
                         
                         <button class="timeline-btn relative group focus:outline-none mb-6 md:mb-0" data-stage="stage-1">
-                            <div class="w-10 h-10 rounded-full border-4 border-[#0FCD7D] bg-white flex items-center justify-center z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-10 h-10 rounded-full border-4 border-[#0FCD7D] bg-white flex items-center justify-center z-10 shadow-md group-hover:scale-110 transition-transform duration-200">
                                 <span class="w-3.5 h-3.5 rounded-full bg-[#0FCD7D]"></span>
                             </div>
                             <span class="block mt-4 font-bold text-sm text-[#194848]">1. The Build-Up</span>
                         </button>
                         
                         <button class="timeline-btn relative group focus:outline-none mb-6 md:mb-0" data-stage="stage-2">
-                            <div class="w-10 h-10 rounded-full border-4 border-gray-300 bg-white flex items-center justify-center z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-10 h-10 rounded-full border-4 border-gray-300 bg-white flex items-center justify-center z-10 shadow-md group-hover:scale-110 transition-transform duration-200">
                                 <span class="w-3.5 h-3.5 rounded-full bg-gray-300"></span>
                             </div>
                             <span class="block mt-4 font-bold text-sm text-gray-400">2. The Containment</span>
                         </button>
 
                         <button class="timeline-btn relative group focus:outline-none" data-stage="stage-3">
-                            <div class="w-10 h-10 rounded-full border-4 border-gray-300 bg-white flex items-center justify-center z-10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-10 h-10 rounded-full border-4 border-gray-300 bg-white flex items-center justify-center z-10 shadow-md group-hover:scale-110 transition-transform duration-200">
                                 <span class="w-3.5 h-3.5 rounded-full bg-gray-300"></span>
                             </div>
                             <span class="block mt-4 font-bold text-sm text-gray-400">3. The Hidden Aftermath</span>
@@ -446,10 +448,10 @@
                         <h4 class="text-xl font-bold text-[#194848] mb-4 merriweather" id="tl-title">1. The Build-Up - The Missed Early Signals</h4>
                         <div class="text-gray-700 text-sm leading-relaxed space-y-3" id="tl-body">
                             <p>
-                                Following the stabbing, online hostility, misinformation, and anti-immigrant sentiment escalated rapidly across social platforms and messaging channels. While the physical unrest had not yet fully materialised, the surrounding risk environment was already changing.
+                                Following the stabbing, online hostility, misinformation, and anti-immigrant sentiment escalated rapidly across social platforms and messaging channels. While the physical incident was severe but isolated, the digital ecosystem was already generating secondary waves of threat perception that would ultimately matter far more to employee safety psychology.
                             </p>
                             <p class="font-medium text-[#194848]">
-                                Legacy systems largely waited for confirmed disruption or violence before triggering alerts. Kowroo’s contextual model instead identifies secondary indicators, rising community tension, targeted hostility, abnormal behavioural patterns, and rapidly evolving local sentiment, helping organisations surface emerging risks earlier.
+                                Legacy systems largely waited for confirmed disruption or violence before triggering alerts. Kowroo's contextual model instead identifies secondary indicators, real-time sentiment shifts, and emerging narrative structures that signal evolving risk to individuals long before macro-incidents occur.
                             </p>
                         </div>
                     </div>
@@ -463,7 +465,7 @@
                 <p class="text-gray-300 text-lg mb-10 leading-relaxed">
                     Elevate your Duty of Care. Protect your corporate travel ROI. Build operational partnerships based on empathy and real-world data. Stop managing travel, start managing people.
                 </p>
-                <button onclick="openCalModal()" class="bg-[#0FCD7D] text-[#194848] px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(15,205,125,0.4)]">
+                <button onclick="openCalModal()" class="bg-[#0FCD7D] text-[#194848] px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(15,205,125,0.2)]">
                     Schedule a Demo
                 </button>
                 <div class="mt-12 text-sm text-[#3E9883]">
@@ -475,7 +477,7 @@
 
     </div>
 
-    <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-30 flex items-center gap-4 bg-[#194848]/90 text-white px-5 py-2.5 rounded-full border border-[#3E9883]/30 shadow-lg text-sm backdrop-blur-sm select-none">
+    <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-30 flex items-center gap-4 bg-[#194848]/90 text-white px-5 py-2.5 rounded-full border border-[#3E9883]/30 shadow-lg text-sm backdrop-blur-md">
         <button id="prev-slide-btn" class="hover:text-[#0FCD7D] transition-colors font-bold px-2">&larr;</button>
         <div class="flex gap-2" id="slide-dots">
             <span class="dot w-2.5 h-2.5 rounded-full bg-[#0FCD7D] transition-all duration-300 scale-125"></span>
@@ -491,7 +493,7 @@
 
     <div id="cal-modal" class="fixed inset-0 z-50 hidden bg-[#194848]/85 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 w-full max-w-4xl h-[85vh] flex flex-col overflow-hidden relative">
-            <button onclick="closeCalModal()" class="absolute top-4 right-4 text-[#194848]/80 hover:text-red-500 hover:rotate-90 transition-all duration-300 z-50 text-3xl font-light w-8 h-8 flex items-center justify-center bg-[#EFEEED] rounded-full focus:outline-none">&times;</button>
+            <button onclick="closeCalModal()" class="absolute top-4 right-4 text-[#194848]/80 hover:text-red-500 hover:rotate-90 transition-all duration-300 z-50 text-3xl font-light w-8 h-8 flex items-center justify-center">×</button>
             <div class="p-6 h-full w-full">
                 <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
             </div>
@@ -548,7 +550,7 @@
                     setTimeout(() => {
                         headline.innerText = 'The Experience Continues.';
                         headline.style.opacity = 1;
-                        body.innerHTML = 'An employee navigating the city absorbs residual signals: lingering community tension, media rhetoric, and a sense of vulnerability. This unseen anxiety changes their behavior, leading them to avoid public transport, cancel networking, and remain confined.';
+                        body.innerHTML = 'An employee navigating the city absorbs residual signals: lingering community tension, media rhetoric, and a sense of vulnerability. This unseen anxiety persists regardless of the dashboard status, consuming emotional and cognitive resources, reducing focus on work, and causing withdrawal from planned activities.';
                         body.style.opacity = 1;
                     }, 200);
 
@@ -570,7 +572,7 @@
                     setTimeout(() => {
                         headline.innerText = 'The Incident is Contained.';
                         headline.style.opacity = 1;
-                        body.innerHTML = 'Traditional risk models focus on macro-threats. The physical event has ended. The statistical probability of a major event is low. The dashboard reports that normality has returned and operational disruptions are cleared.';
+                        body.innerHTML = 'Traditional risk models focus on macro-threats. The physical event has ended. The statistical probability of a major event is low. The dashboard reports that normality has been restored. All-clear status maintained.';
                         body.style.opacity = 1;
                     }, 200);
 
