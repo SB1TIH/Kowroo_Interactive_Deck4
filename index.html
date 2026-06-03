@@ -119,6 +119,19 @@
             transform: scale(1.05) translateY(-5px);
             filter: drop-shadow(0 15px 30px rgba(15, 205, 125, 0.25));
         }
+
+        .timeline-btn {
+            cursor: pointer;
+        }
+        .timeline-btn.active .w-10 {
+            border-color: #0FCD7D !important;
+        }
+        .timeline-btn.active .w-10 span {
+            background-color: #0FCD7D !important;
+        }
+        .timeline-btn.active span.block {
+            color: #194848 !important;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-[#0FCD7D] selection:text-[#194848]">
@@ -317,7 +330,7 @@
                     </div>
 
                     <div class="bg-white/5 backdrop-blur-md rounded-2xl border border-[#3E9883]/30 overflow-hidden shadow-lg">
-                        <div class="flex flex-col md:flex-row border-b border-[#3E9883]/30 bg-black/10" id="tabs-container">
+                        <div class="flex flex-col md:flex-row border-b border-[#3E9883]/30 bg-black/10">
                             <button class="tab-btn active flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-[#0FCD7D]" data-tab="1">Signal Detection</button>
                             <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent" data-tab="2">Assessment</button>
                             <button class="tab-btn flex-1 py-3 px-4 text-center text-xs md:text-sm font-medium tracking-wide focus:outline-none transition-all duration-300 border-b-2 border-transparent" data-tab="3">Engagement</button>
@@ -423,7 +436,7 @@
                     <div class="flex flex-col md:flex-row justify-between items-center mb-8 relative">
                         <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -z-10 transform -translate-y-1/2"></div>
                         
-                        <button class="timeline-btn relative group focus:outline-none mb-6 md:mb-0" data-stage="stage-1">
+                        <button class="timeline-btn active relative group focus:outline-none mb-6 md:mb-0" data-stage="stage-1">
                             <div class="w-10 h-10 rounded-full border-4 border-[#0FCD7D] bg-white flex items-center justify-center z-10 shadow-md group-hover:scale-110 transition-transform duration-200">
                                 <span class="w-3.5 h-3.5 rounded-full bg-[#0FCD7D]"></span>
                             </div>
@@ -547,22 +560,16 @@
                 button.addEventListener('click', () => {
                     const tabNumber = button.getAttribute('data-tab');
                     
-                    // Remove active class from all buttons
                     tabButtons.forEach((btn) => btn.classList.remove('active'));
-                    
-                    // Hide all tab contents
                     tabContents.forEach((content) => content.classList.add('hidden'));
                     
-                    // Add active class to clicked button
                     button.classList.add('active');
                     
-                    // Show the corresponding tab content
                     const activeTab = document.getElementById(`tab-${tabNumber}`);
                     if (activeTab) {
                         activeTab.classList.remove('hidden');
                     }
                     
-                    // Update border color
                     tabButtons.forEach((btn) => {
                         if (btn.classList.contains('active')) {
                             btn.style.borderBottomColor = '#0FCD7D';
@@ -570,6 +577,69 @@
                             btn.style.borderBottomColor = 'transparent';
                         }
                     });
+                });
+            });
+
+            // TIMELINE FUNCTIONALITY FOR CASE STUDY SLIDE
+            const timelineButtons = document.querySelectorAll('.timeline-btn');
+            const timelineContentBox = document.getElementById('timeline-content-box');
+            const tlTitle = document.getElementById('tl-title');
+            const tlBody = document.getElementById('tl-body');
+
+            const timelineContent = {
+                'stage-1': {
+                    title: '1. The Build-Up - The Missed Early Signals',
+                    content: '<p>Following the stabbing, online hostility, misinformation, and anti-immigrant sentiment escalated rapidly across social platforms and messaging channels. While the physical incident was severe but isolated, the digital ecosystem was already generating secondary waves of threat perception that would ultimately matter far more to employee safety psychology.</p><p class="font-medium text-[#194848]">Legacy systems largely waited for confirmed disruption or violence before triggering alerts. Kowroo\'s contextual model instead identifies secondary indicators, real-time sentiment shifts, and emerging narrative structures that signal evolving risk to individuals long before macro-incidents occur.</p>'
+                },
+                'stage-2': {
+                    title: '2. The Containment - The Corporate Control Narrative',
+                    content: '<p>Within 72 hours, the planned riots occurred but were rapidly dispersed by police. Traditional risk systems reported incident containment: "Situation stabilised. No further escalation anticipated. Threat level returning to baseline."</p><p class="font-medium text-[#194848]">From an operational standpoint, they were correct. From an employee standpoint, they were catastrophically wrong. Despite media reports of control and management, employees continued to report elevated anxiety, cancelled social plans, reduced mobility, and psychological distress that would persist for weeks.</p>'
+                },
+                'stage-3': {
+                    title: '3. The Hidden Aftermath - The Invisible Tail',
+                    content: '<p>Six weeks later, corporate dashboards showed "all-clear." But employees remained psychologically fragile. Absenteeism remained elevated. Mental health referrals spiked. High-performing staff quietly began exploring roles in "safer" cities. Recruitment pipelines suffered as job candidates expressed hesitation about Dublin assignments.</p><p class="font-medium text-[#194848]">The visible incident had ended. The human toll was silent and persistent. Traditional tools had no sensors for this residual friction—no way to measure the cumulative cost of psychological safety loss, reduced engagement, and eroded organisational trust. Kowroo would have captured these signals continuously, enabling proactive support precisely when it mattered most.</p>'
+                }
+            };
+
+            timelineButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const stage = button.getAttribute('data-stage');
+                    
+                    // Update active button styling
+                    timelineButtons.forEach((btn) => {
+                        btn.classList.remove('active');
+                        const dotDiv = btn.querySelector('.w-10');
+                        const dotSpan = dotDiv.querySelector('span');
+                        const textSpan = btn.querySelector('.block');
+                        
+                        dotDiv.classList.remove('border-[#0FCD7D]');
+                        dotDiv.classList.add('border-gray-300');
+                        dotSpan.classList.remove('bg-[#0FCD7D]');
+                        dotSpan.classList.add('bg-gray-300');
+                        textSpan.classList.remove('text-[#194848]');
+                        textSpan.classList.add('text-gray-400');
+                    });
+                    
+                    button.classList.add('active');
+                    const activeDotDiv = button.querySelector('.w-10');
+                    const activeDotSpan = activeDotDiv.querySelector('span');
+                    const activeTextSpan = button.querySelector('.block');
+                    
+                    activeDotDiv.classList.remove('border-gray-300');
+                    activeDotDiv.classList.add('border-[#0FCD7D]');
+                    activeDotSpan.classList.remove('bg-gray-300');
+                    activeDotSpan.classList.add('bg-[#0FCD7D]');
+                    activeTextSpan.classList.remove('text-gray-400');
+                    activeTextSpan.classList.add('text-[#194848]');
+                    
+                    // Fade out current content
+                    timelineContentBox.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        tlTitle.innerText = timelineContent[stage].title;
+                        tlBody.innerHTML = timelineContent[stage].content;
+                        timelineContentBox.style.opacity = '1';
+                    }, 150);
                 });
             });
 
